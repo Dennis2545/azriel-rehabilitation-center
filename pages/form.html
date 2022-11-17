@@ -1,6 +1,6 @@
 <head>
-    <link rel="stylesheet" type="text/css" href="../style.css">  
-    <script type="text/javascript" src="../script.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="js/faq.js"></script>
     
   </head>
   
@@ -88,6 +88,7 @@
           </a>
         </div>
      
+     
       
       <script>
       function myFunction() {
@@ -108,312 +109,231 @@
 
 <head>
     <style>
-        
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}   
+  box-sizing: border-box;
+}
 
-h1, h2 {
-    font: inherit;
+/* FONTS 
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+
+:root {
+  --primary-clr: #00b0f0;
+  --secondary-clr: #f1540f;
+}
+
+html {
+  font-size: 100%;
 }
 
 body {
-    font:16px/1.2 'Poppins', sans-serif;
-    background: 
-    linear-gradient(45deg, hsl(236, 100%, 80%,.4), rgba(205,155,225,.3));
+  font-family: "Roboto", sans-serif;
+  color: #555555;
+  margin: 0;
+  padding: 0;
+  background-image: url("../pictures/al2.jpg");
+  font-size: 1.062rem;
+  line-height: 1.6;
+
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
-.gallery {
-    --anim-time--hi: 266ms;
-    --anim-time--med: 400ms;
-    --anim-time--lo: 600ms;
+h1 {
+  text-align: center;
+}
 
+h2 {
+  text-align: center;
+}
+
+p#break {
+  font-weight: lighter;
+  font-size: 0.85rem;
+  line-height: 1;
+
+  margin: 0;
+}
+
+.container {
+  width: 75%;
+  margin: auto;
+  max-width: 700px;
+}
+
+.card {
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.46);
+  border-radius: 10px;
+  margin-bottom: 2em;
+  padding: 2em;
+  /* Gives opacity to card without effecting children */
+  background: rgba(238, 180, 54, 0.95);
+}
+
+.message-title {
+  margin-top: 0;
+  padding-bottom: 0.75em;
+  border-bottom: solid 1px rgb(221, 221, 221);
+  text-align: left;
+}
+
+.message-container {
+  margin-bottom: 8em;
+  max-width: 600px;
+}
+
+form {
+  display: grid;
+
+  grid-template-columns: 90px auto auto;
+  grid-column-gap: 0.5em;
+  grid-row-gap: 2em;
+}
+
+label {
+  font-weight: bold;
+  grid-column: 1/2;
+}
+
+input {
+  /* May help keep right column responsive
+	width: cal(100%-200px); */
+  grid-column: 2/4;
+  height: 3em;
+  border: solid 3px var(--primary-clr);
+  border-radius: 4em;
+  padding: 0 1em;
+}
+
+input,
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+textarea {
+  grid-column: 2/4;
+  border-radius: 2em;
+  border: solid 3px var(--primary-clr);
+  padding: 0.5em 1em;
+}
+
+input:focus,
+textarea:focus {
+  background: rgb(247, 161, 2);
+}
+
+.first-name {
+  grid-column: 2/3;
+}
+
+.last-name {
+  grid-column: 3/4;
+}
+
+.button-container {
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.button {
+  width: 100px;
+  background: rgb(192, 129, 11);
+  color: rgb(61, 59, 58);
+  border: none;
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Specific to background image */
+  img #background-img {
+    left: 50%;
+    left: -512px; /* 50% */
+  }
+}
+
+/* For Mobile */
+@media (max-width: 750px) {
+  .container {
+    width: 90%;
+  }
+
+  form {
     display: flex;
-    place-content: center;
-    max-width: clamp(30rem, 95%, 50rem);
-    width: max(22.5rem, 100%);
-    min-height: 100vh;
-    margin-inline: auto;
-    padding: clamp(0px, (30rem  - 100vw) * 9999, 1rem);
-   
-}
-
-.gallery__content--flow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.gallery__content--flow > *  {
-    flex-grow: 1;
-    flex-basis: calc((30rem - 100%) * 999);
-}
-
-figure {
-    display: flex;
-    min-width: 14rem;
-    max-height: 16rem;
-    position: relative;
-    border-radius: .35rem;
-    box-shadow:
-    rgb(40, 40, 40, 0.1) 0px 2px 3px,
-    rgb(20, 20, 20, 0.2) 0px 5px 8px,
-    rgb(0, 0, 0, 0.25) 0px 10px 12px;
-    overflow: hidden;
-    transition: transform var(--anim-time--med) ease;
-}
-
-figure::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        hsla(0, 0%, 0%, 0.8) 0%,
-        hsla(0, 0%, 0%, 0.7) 12%,
-        hsla(0, 0%, 0%, 0.2) 41.6%,
-        hsla(0, 0%, 0%, 0.125) 50%,
-        hsla(0, 0%, 0%, 0.01) 59.9%,
-        hsla(0, 0%, 0%, 0) 100%
-    );
-    opacity: 0;
-    transition-property: opacity, transform;
-    transition-duration: var(--anim-time--med), var(--anim-time--med);
-    transition-timing-function: ease, ease;
-      z-index: 4;
-}
-
-.header__caption {
-    z-index: 10;
-    position: absolute;
-    display: inline-flex;
     flex-direction: column;
-    align-self: flex-end;
-    width: 100%;
-    gap: 0.5rem;
-    padding: 1rem;
-    justify-content: center;
-    text-align: center;
-    transform: translateY(100%);
-    transition: transform var(--anim-time--hi) linear,
-    opacity var(--anim-time--hi) linear;
+    grid-row-gap: 0;
+  }
+
+  .name {
+    grid-column-gap: 0;
+  }
+
+  input,
+  textarea {
+    margin: 1em 0;
+  }
+
+  p#break {
+    display: inline;
+  }
 }
 
-figure:hover::before {
-    opacity: 0.8;
-}
 
-figure:hover .header__caption {
-    transform: translateY(0);
-    opacity: 1;
-}
-figure:hover img{
-    transform: scale(1);
-}
-.title {
-    color: #fff;
-    
-}
-
-.title--primary {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.title--secondary {
-    text-transform:uppercase;
-    font-weight: bold;
-}
-
-img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    height: 100%;
-  transform: scale(1.15);
-    aspect-ratio: 16 / 13;
-    transition: 400ms ease-in-out;
-}
 
     </style>
-  </head>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</head>
 
-<main class="gallery gallery__content--flow">
-    <figure>
-        <img src="../pictures/home1.jpg"
-            alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. "
-            title="Photo by Giacomo Lucarini for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Madam : Miss Miss Mwangi</h1>
-            <h2 class="title title--secondary">Founder of Azriel</h2>
-        </figcaption>
-    </figure>
 
-    <figure>
-        <img src="../pictures/school2.png"
-            alt="A tabby kitten with green eyes. " title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Kitten: Reese</h1>
-            <h2 class="title title--secondary">8 weeks old</h2>
-        </figcaption>
-    </figure>
+<div class="container card message-container ">
+    <h1 class="message-title">Donation Page</h1>
+  
+    <form action="mailto:email@email.com" method="post" enctype="text/plain">
+  
+      <label for="subject" class="subject">Donation Amount</label>
+      <input type="text" name="subject" maxlength="45">
+  
+      <label for="message" class="message">Your message To Alzeria</label>
+      <textarea name="message" cols="30" rows="7" required maxlength="500"></textarea>
+  
+      <label for="name" class="name">Name
+        <!-- keep <p> on next line to keep a letter space for mobile version -->
+        <p id="break">(Optional)</p>
+      </label>
+      <input class="first-name" type="text" name="first-name" placeholder="First Name" maxlength="20">
+      <input class="last-name" type="text" name="last-name" placeholder="Last Name" maxlength="20">
+  
+      <label for="email" class="email">Email
+        <!-- keep <b> on next line to keep a letter space for mobile version -->
+        <p id="break">(Optional)</p>
+      </label>
+      <input type="email" name="email" placeholder="example@email.com">
+  
+      <p class="button-container">
+        
+        <input class="button" type="submit" value="Send">
+      </p>
+      
+    </form>
+    <p>THANK YOU FOR STANDING WITH AZRIEL TODAY BE BLESSED</p>
+  </div>
+  
 
-    <figure>
-        <img src="../pictures/school3.png"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Bunny: Sofia</h1>
-            <h2 class="title title--secondary">3 years old</h2>
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="../pictures/school1.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Kitten: Katie</h1>
-            <h2 class="title title--secondary">1 years old</h2>
-        </figcaption>
-    </figure>
-
-    <figure>
-        <img src="../pictures/al2.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Puppy: Bruce</h1>
-            <h2 class="title title--secondary">10 weeks old</h2>
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="../pictures/home2.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Bunny: Jeff</h1>
-            <h2 class="title title--secondary">2 years old</h2>
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="../pictures/home1.jpg"
-            alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. "
-            title="Photo by Giacomo Lucarini for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Madam : Miss Miss Mwangi</h1>
-            <h2 class="title title--secondary">Founder of Azriel</h2>
-        </figcaption>
-    </figure>
-
-    <figure>
-        <img src="../pictures/school2.png"
-            alt="A tabby kitten with green eyes. " title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Kitten: Reese</h1>
-            <h2 class="title title--secondary">8 weeks old</h2>
-        </figcaption>
-    </figure>
-
-    <figure>
-        <img src="../pictures/school3.png"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Bunny: Sofia</h1>
-            <h2 class="title title--secondary">3 years old</h2>
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="../pictures/school1.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Kitten: Katie</h1>
-            <h2 class="title title--secondary">1 years old</h2>
-        </figcaption>
-    </figure>
-
-    <figure>
-        <img src="../pictures/al2.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Puppy: Bruce</h1>
-            <h2 class="title title--secondary">10 weeks old</h2>
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="../pictures/home2.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Bunny: Jeff</h1>
-            <h2 class="title title--secondary">2 years old</h2>
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="../pictures/home1.jpg"
-            alt="A light brown, long-haired chihuahua sitting next to three rubber duckies. "
-            title="Photo by Giacomo Lucarini for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Madam : Miss Miss Mwangi</h1>
-            <h2 class="title title--secondary">Founder of Azriel</h2>
-        </figcaption>
-    </figure>
-
-    <figure>
-        <img src="../pictures/school2.png"
-            alt="A tabby kitten with green eyes. " title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Kitten: Reese</h1>
-            <h2 class="title title--secondary">8 weeks old</h2>
-        </figcaption>
-    </figure>
-
-    <figure>
-        <img src="../pictures/school3.png"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Bunny: Sofia</h1>
-            <h2 class="title title--secondary">3 years old</h2>
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="../pictures/school1.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Kitten: Katie</h1>
-            <h2 class="title title--secondary">1 years old</h2>
-        </figcaption>
-    </figure>
-
-    <figure>
-        <img src="../pictures/al2.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Puppy: Bruce</h1>
-            <h2 class="title title--secondary">10 weeks old</h2>
-        </figcaption>
-    </figure>
-    <figure>
-        <img src="../pictures/home2.jpg"
-            alt="A light brown puppy standing on a white and tan woven pet bed. "
-            title="Photo by Sergey Semin for Unsplash">
-        <figcaption class="header__caption" role="presentation">
-            <h1 class="title title--primary">Bunny: Jeff</h1>
-            <h2 class="title title--secondary">2 years old</h2>
-        </figcaption>
-    </figure>
-</main>
-<footer class="footer">
+  <footer class="footer">
     <div class="flex flex-columns">
       
           <path id="Path_612" data-name="Path 612" d="M1780.065,378.462v13.716l-12,6.857-12-6.858h0Z"

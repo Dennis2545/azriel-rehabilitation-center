@@ -1,208 +1,617 @@
-<!DOCTYPE html>
-<html>
 <head>
-<title>Azriel programmes</title>
-
-<!--META TAGS-->
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-<!--FONTAWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet"> 
-
-<!--EXTERNAL CSS AND JS-->
-<link rel="stylesheet" href="../css/program.css">
-  <script src="../script/script.js"></script>
-
-</head>
-<body>
-
-<!--HEADER-->
-<header>
+    <link rel="stylesheet" type="text/css" href="../style.css">  
     
-<div class="logo parallelogram">
-    <span class="skew-fix"><img src="../pictures/g.png" alt="ALZERIA"></span>
-    </div>
-
-<div class="topnav" id="myTopnav">
-<a href="../index.html" class="active">HOME</a>
-<a href="about.html">ABOUT US</a>
-<a href="programme.html">PROGRAMMES</a>
-<div class="dropdown">
-    <button class="dropbtn">GALLERY
-    <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content animate">
-    <a href="gallery.html">Testmonial</a>
-    <a href="pictorial.html">pictorial</a>
+    <script type="text/javascript" src="../script.js"></script> 
+    
+  </head>
   
-    </div>
-    </div> 
-<a href="faq.html">FAQs</a>
-<a href="contact.html">CONTACT US</a>
-<a href="#" title="SignIn" style="float:right;"><i class="fa fa-user"></i></a>
-<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
-</header>
+  <nav class="nav">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: rgb(221, 221, 221);
+        color: black;
+      }
+      
+      .topnav a.split {
+    float: right;
+    background-color: #04AA6D;
+    color: white;
+  }
+      .topnav a.active {
+        background-color: #000000;
+        color: white;
+      }
+      
+      .topnav .icon {
+        display: none;
+      }
+      
+      @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+      </style>
+      </head>
+      <body>
+      
+        <div class="topnav" id="myTopnav">
+          <a href="#home" class="active"></a>
+          <a href="../index.html">HOMEPAGE</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="programme.html">PROGRAMMES</a>
+            <a href="gallery.html">GALLERY
+            <i class="fa fa-caret-down"></i>
+            </a>
+          <a href="faq.html">FAQs</a>
+          <a href="contact.html" class="split">CONTACT US</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+     
+      
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+      
+        </li>
+      </ul>
+    </nav>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+      * {box-sizing: border-box;}
+      body {font-family: Verdana, sans-serif;}
+      .mySlides {display: none;}
+      img {vertical-align: middle;}
+      
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+      
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active {
+        background-color: #717171;
+      }
+      
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+      }
+      </style>
+      </head>
+      <body>
+        <div class="about-section">
+          <div class="inner-width">
+        <h2>AZRIEL PROGRAMMES</h2>
+        </div></div>
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+
+
+      <div class="slideshow-container">
+      
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="../pictures/al1.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="../pictures/al1.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="../pictures/al3.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+      
+
+      
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+     
+      
+      <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+      }
+      </script>
 
 
 
 
-<!--CONTAINER-->
-<div class="container">
-<section>
-<h1>PROGRAMMES</h1>
 
-<H2>AZRIEL REHABILITATION AND TREATMENT CENTRE</h2>
-</section>
-<div class="container1" id='image'></div>
-</div>
+  
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+      <style>
+
+ 
 
 
-<br>
-<br>
-
-<!--SECTION1-->
-<section class="section1">
-<em>Counselling</em>
-<br>
-<p>The long term program centers around individual experiencing substance misuse, this is generally done away from their standard spot or workplace upon appearance a medication test is finished to reveal the principal substance that have been mishandled, for this situation the individual going through restoration is typically alluded to as a client. After drug test the client is reestablished by a specialist who ordinarily draws a treatment plan .The treatment is typically in two phases; withdrawal the board and detoxification .The withdrawal the executives as a rule manages every one of the secondary effects that accompanies halting the admission of the medication of decision without a moment's delay. The detox stage is a sensitive interaction that expects to be observed by a certified specialist and a legitimate nursing which is typically promptly accessible.
-    The client likewise goes through mental or directing meetings to distinguish the basic issues for a period as specified by the clinician. Sooner or later en route the relatives are associated with a family treatment meeting that
-    is pointed toward connecting the distinctions experienced by the two players because of medication and substance misuse; this likewise gives a stage to examining the leave plan for the client once he/she is through with the program to forestall backslide. The ongoing project as a rule runs for a base time.
-
-</p>
-<p>Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</p>
+.inner-width{
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 0 20px;
+  margin: auto;
+}
+.about-section h1{
+  text-align: center;
+}
+.border{
+  width: 100px;
+  height: 3px;
+  background: #daa90a;
+  margin: 30px auto;
+}
+.about-section-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.about-section-col{
+  flex: 50%;
+}
+.about{
+  padding-right: 30px;
+}
+.about p{
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #7E7C7A;
+  font-size: 17px;
+}
+.about a{
+  display: inline-block;
+  color: #7E7C7A;
+  text-decoration: none;
+  border: 2px solid #3CEDA7;
+  border-radius: 24px;
+  padding: 8px 40px;
+  transition: 0.4s linear;
+}
+.about a:hover{
+  color: #fff;
+  background: #3CEDA7;
+}
+.skills{
+  padding-left: 30px;
+}
+.skill{
+  margin-bottom: 10px;
+}
+.title{
+  color: #7E7C7A
+}
+.progress{
+  width: 100%;
+  height: 12px;
+  background: #ddd;
+  border-radius: 12px;
+}
+.progress-bar{
+  height: 12px;
+  background: #3CEDA7;
+  border-radius: 12px;
+}
+.p1{
+  width: 90%;
+}
+.p2{
+  width: 70%;
+}
+.p3{
+  width: 50%;
+}
+.progress-bar span{
+  float: right;
+  margin-right: 6px;
+  line-height: 13px;
+  color: #fff;
+  font-size: 12px;
+}
+@media screen and (max-width:700px) {
+  .about-section-col{
+    flex: 100%;
+    margin: 10px 0;
+  }
+  .about,.skills{
+    padding: 0;
+  }
+  .about{
+    text-align: center;
+  }
+}
+      </style>
+      <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+   
+   
+    </head>
+    <body>
+        <div class="about-section">
+          <div class="inner-width">
+            
+            <br>
+            <br>
+            <br>
+            <h2>1. INPATIENT REHABILITATION</h2>
+            <div class="border"></div>
+            <div class="about-section-row">
+              <div class="about-section-col">
+                <div class="about">
+                  <p>The long term program centers around individual experiencing substance misuse, this is generally done away from their standard spot or workplace upon appearance a medication test is finished to reveal the principal substance that have been mishandled, for this situation the individual going through restoration is typically alluded to as a client. After drug test the client is reestablished by a specialist who ordinarily draws a treatment plan .The treatment is typically in two phases; withdrawal the board and detoxification .The withdrawal the executives as a rule manages every one of the secondary effects that accompanies halting the admission of the medication of decision without a moment's delay. The detox stage is a sensitive interaction that expects to be observed by a certified specialist and a legitimate nursing which is typically promptly accessible.
+                    The client likewise goes through mental or directing meetings to distinguish the basic issues for a period as specified by the clinician. Sooner or later en route the relatives are associated with a family treatment meeting that
+                    is pointed toward connecting the distinctions experienced by the two players because of medication and substance misuse; this likewise gives a stage to examining the leave plan for the client once he/she is through with the program to forestall backslide. The ongoing project as a rule runs for a base time.
+                
+                </p>
+                </div>
+              </div>
+              <div class="about-section-col">
+                <div class="skills">
+                  <div class="skill">
+                    <div class="title">INPATIENT REHABILITATION</div>
+                    <div class="progress">
+                      <div class="progress-bar p1"><span>100%</span></div>
+                    </div>
+                  </div>
+   
+                  <div class="skill">
+                    <div class="title">cooperation</div>
+                    <div class="progress">
+                      <div class="progress-bar p2"><span>100%</span></div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="about-section">
+            <div class="inner-width">
+              
+              <br>
+              <br>
+              <br>
+              <h2>2. Counselling</h2>
+              <div class="border"></div>
+              <div class="about-section-row">
+                <div class="about-section-col">
+                  <div class="about">
+                    <p>The long term program centers around individual experiencing substance misuse, this is generally done away from their standard spot or workplace upon appearance a medication test is finished to reveal the principal substance that have been mishandled, for this situation the individual going through restoration is typically alluded to as a client. After drug test the client is reestablished by a specialist who ordinarily draws a treatment plan .The treatment is typically in two phases; withdrawal the board and detoxification .The withdrawal the executives as a rule manages every one of the secondary effects that accompanies halting the admission of the medication of decision without a moment's delay. The detox stage is a sensitive interaction that expects to be observed by a certified specialist and a legitimate nursing which is typically promptly accessible.
+                      The client likewise goes through mental or directing meetings to distinguish the basic issues for a period as specified by the clinician. Sooner or later en route the relatives are associated with a family treatment meeting that
+                      is pointed toward connecting the distinctions experienced by the two players because of medication and substance misuse; this likewise gives a stage to examining the leave plan for the client once he/she is through with the program to forestall backslide. The ongoing project as a rule runs for a base time.
+                  
+                  </p>
+                  <p>Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</p>
 <p>Our centre is founded encouraged and driven by the following core value;</p>
 
-</section>
-
-<br>
-<br>
-
-<!--SECTION1-->
-<section class="section1">
-<em>life skills and Training</em>
-            <p>
-                In this program the client has meetings with the dependence mentor that spotlights on mental issues, family issues, peer bunch issues, way of life issues, marriage issues, support issues, backslide issues, among others gives that could influence their recuperation cycle.
-            </p>
-<h1>Quality Medical care and Rehabilitation services</h1>
-<p>Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</p>
+                  </div>
+                </div>
+                <div class="about-section-col">
+                  <div class="skills">
+                    <div class="skill">
+                      <div class="title">Counselling</div>
+                      <div class="progress">
+                        <div class="progress-bar p1"><span>100%</span></div>
+                      </div>
+                    </div>
+     
+                    <div class="skill">
+                      <div class="title">cooperation</div>
+                      <div class="progress">
+                        <div class="progress-bar p2"><span>100%</span></div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="about-section">
+              <div class="inner-width">
+                
+                <br>
+                <br>
+                <br>
+                <h2>3. Treatment and life skill training</h2>
+                <div class="border"></div>
+                <div class="about-section-row">
+                  <div class="about-section-col">
+                    <div class="about">
+                      <p>The long term program centers around individual experiencing substance misuse, this is generally done away from their standard spot or workplace upon appearance a medication test is finished to reveal the principal substance that have been mishandled, for this situation the individual going through restoration is typically alluded to as a client. After drug test the client is reestablished by a specialist who ordinarily draws a treatment plan .The treatment is typically in two phases; withdrawal the board and detoxification .The withdrawal the executives as a rule manages every one of the secondary effects that accompanies halting the admission of the medication of decision without a moment's delay. The detox stage is a sensitive interaction that expects to be observed by a certified specialist and a legitimate nursing which is typically promptly accessible.
+                        The client likewise goes through mental or directing meetings to distinguish the basic issues for a period as specified by the clinician. Sooner or later en route the relatives are associated with a family treatment meeting that
+                        is pointed toward connecting the distinctions experienced by the two players because of medication and substance misuse; this likewise gives a stage to examining the leave plan for the client once he/she is through with the program to forestall backslide. The ongoing project as a rule runs for a base time.
+                    
+                    </p>
+                    <p>Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</p>
+  <p>Our centre is founded encouraged and driven by the following core value;</p>
+  
+                    </div>
+                  </div>
+                  <div class="about-section-col">
+                    <div class="skills">
+                      <div class="skill">
+                        <div class="title">Life skill Training</div>
+                        <div class="progress">
+                          <div class="progress-bar p1"><span>100%</span></div>
+                        </div>
+                      </div>
+       
+                      <div class="skill">
+                        <div class="title">cooperation</div>
+                        <div class="progress">
+                          <div class="progress-bar p2"><span>100%</span></div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="about-section">
+                <div class="inner-width">
+                  
+                  <br>
+                  <br>
+                  <br>
+                  <h2>2. Physical Therapy</h2>
+                  <div class="border"></div>
+                  <div class="about-section-row">
+                    <div class="about-section-col">
+                      <div class="about">
+                        <p>Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</p>
 <p>Our centre is founded encouraged and driven by the following core value;</p>
 
-</section>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!--SECTION1-->
-<section class="section1">
-<em>Inpatient Rehabilitation</em>
-<p>The long term program centers around individual experiencing substance misuse, this is generally done away from their standard spot or workplace upon appearance a medication test is finished to reveal the principal substance that have been mishandled, for this situation the individual going through restoration is typically alluded to as a client. After drug test the client is reestablished by a specialist who ordinarily draws a treatment plan .The treatment is typically in two phases; withdrawal the board and detoxification .The withdrawal the executives as a rule manages every one of the secondary effects that accompanies halting the admission of the medication of decision without a moment's delay. The detox stage is a sensitive interaction that expects to be observed by a certified specialist and a legitimate nursing which is typically promptly accessible.
-    The client likewise goes through mental or directing meetings to distinguish the basic issues for a period as specified by the clinician. Sooner or later en route the relatives are associated with a family treatment meeting that
-    is pointed toward connecting the distinctions experienced by the two players because of medication and substance misuse; this likewise gives a stage to examining the leave plan for the client once he/she is through with the program to forestall backslide. The ongoing project as a rule runs for a base time.
-
-</p>
-
-<p>Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</p>
-<p>Our centre is founded encouraged and driven by the following core value;</p>
-
-</section>
-
-<br>
-<br>
-
-<!--SECTION1-->
-<section class="section1">
-<em>Care and Treatment</em>
-            <p>
-                In this program the client has meetings with the dependence mentor that spotlights on mental issues, family issues, peer bunch issues, way of life issues, marriage issues, support issues, backslide issues, among others gives that could influence their recuperation cycle.
-            </p>
-<h1>Physical Therapy</h1>
-<p>Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</p>
-<p>Our centre is founded encouraged and driven by the following core value;</p>
-
-</section>
-
-<br>
-<br>
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-<!--SECTION3-->
-<section class="section3">
-<div class="cards">
-<div class="card">
-<section>
-<h1>General Services</h1>
-<h4>Our general service is to ensure people with addiction and mental disorder find a path into the society. </h4>
-</section>
-</div>
-<div class="card">
-<section>
-<h1>General Treatment</h1>
-<h4>Treatment is done to patient under acceptance condition</h4>
-</section>
-</div>
-<div class="card">
-<section>
-<h1>Therapy</h1>
-<h4>Therapy is important to patients and also close people to the patient</h4>
-</section>
-</div>
-</section>
-
-
-
-
-
-
-
-
-
-<!--FOOTER-->
-<img src="https://i.ibb.co/ZLHbWJz/footer.png" class="footer_image">
-<footer>
-<div class="column">
-<a class="footer_title">AZRIEL COUNSELING</a>
-<a>This page includes references to pertinent laws, rules, and compliance details as well as basic information regarding becoming accredited as a Medicare and/or Medicaid Inpatient Rehabilitation Facility (IRF). IRFs are acute care hospitals' inpatient rehabilitation facilities as well as standalone rehabilitation hospitals.</a>
-<a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
-<a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-<a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
-</div>
-
-<div class="column">
-<a class="footer_title">GET IN TOUCH</a>
-<a title="Address"><i class="fa fa-map-marker"></i> p.o Box 273, Along Nairobi - Embu Highway, Kirinyaga County/Kimbimbi Town, Kenya - 10303</a>
-<a href="emailto:" title="Email"><i class="fa fa-envelope"></i> azrielcounseling@gmail.com</a>
-<a href="tel:" title="Contact"><i class="fa fa-phone"></i> +254722332547</a>
-</div>
-
-
-<div class="sub-footer">
-© CopyRights 2022 Azriel|| All rights reserved
-</div>
-</footer>
-
-<!--JAVASCRIPT-->
-<script src="js/custom.js"></script>
-</body>
-</html>
+                      </p>
+                      <p>Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</p>
+    <p>Our centre is founded encouraged and driven by the following core value;</p>
+    
+                      </div>
+                    </div>
+                    <div class="about-section-col">
+                      <div class="skills">
+                        <div class="skill">
+                          <div class="title">Physical Therapy</div>
+                          <div class="progress">
+                            <div class="progress-bar p1"><span>100%</span></div>
+                          </div>
+                        </div>
+         
+                        <div class="skill">
+                          <div class="title">cooperation</div>
+                          <div class="progress">
+                            <div class="progress-bar p2"><span>100%</span></div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <footer class="footer">
+                  <div class="flex flex-columns">
+                    
+                        <path id="Path_612" data-name="Path 612" d="M1780.065,378.462v13.716l-12,6.857-12-6.858h0Z"
+                          transform="translate(0 0)" fill="#00c8f0" />
+                        <path id="Path_613" data-name="Path 613" d="M1768.067,435.321l12,6.857v13.714h0l-12-6.857-12-6.857V428.463Z"
+                          transform="translate(0 -36.287)" fill="#1563ff" />
+                        <path id="Path_614" data-name="Path 614" d="M1854.67,485.32v13.713l-12-6.856h0V478.463Z"
+                          transform="translate(-62.604 -72.572)" fill="#1563ff" />
+                        <path id="Path_615" data-name="Path 615" d="M1842.669,378.462v0h0v13.714h0l12,6.856v0h0l12,6.856V392.177Z"
+                          transform="translate(-62.604)" fill="#1563ff" />
+                        <path id="Path_616" data-name="Path 616" d="M1866.668,428.463v13.716l-12,6.857-12-6.858,12-6.858Z"
+                          transform="translate(-62.604 -36.287)" fill="#00c8f0" />
+                        <path id="Path_617" data-name="Path 617" d="M1854.67,485.32l-12,6.857h0V478.463Z"
+                          transform="translate(-62.604 -72.572)" fill="#0b96f8" />
+                      </g>
+                    </svg>
+                    <small class="mb-6">Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</small>
+                    <div class="social-medias">
+                      <svg id="facebook-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path id="Path_687" data-name="Path 687"
+                          d="M15.117,16A.883.883,0,0,0,16,15.117V.883A.883.883,0,0,0,15.117,0H.883A.883.883,0,0,0,0,.883V15.117A.883.883,0,0,0,.883,16H15.117Z"
+                          fill="#485a96" />
+                        <path id="Path_688" data-name="Path 688"
+                          d="M112.353,53.893V47.7h2.08l.311-2.415h-2.391V43.741c0-.7.194-1.176,1.2-1.176h1.279v-2.16a17.111,17.111,0,0,0-1.863-.1,2.91,2.91,0,0,0-3.106,3.192v1.781h-2.085V47.7h2.085v6.2h2.494Z"
+                          transform="translate(-101.313 -37.893)" fill="#fff" />
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <g id="twitter-3" transform="translate(-126.176 -2.014)">
+                          <circle id="Ellipse_19" data-name="Ellipse 19" cx="8" cy="8" r="8" transform="translate(126.176 2.014)"
+                            fill="#2daae1" />
+                          <path id="Path_691" data-name="Path 691"
+                            d="M242.31,144.3a4.175,4.175,0,0,1-1.2.329,2.1,2.1,0,0,0,.92-1.157,4.179,4.179,0,0,1-1.328.508,2.092,2.092,0,0,0-3.618,1.431,2.116,2.116,0,0,0,.054.477,5.939,5.939,0,0,1-4.311-2.185,2.094,2.094,0,0,0,.647,2.792,2.082,2.082,0,0,1-.947-.261v.026a2.092,2.092,0,0,0,1.678,2.051,2.081,2.081,0,0,1-.551.073,2.123,2.123,0,0,1-.394-.037,2.094,2.094,0,0,0,1.954,1.452,4.211,4.211,0,0,1-3.1.866,5.948,5.948,0,0,0,9.157-5.011q0-.136-.006-.271A4.262,4.262,0,0,0,242.31,144.3Z"
+                            transform="translate(-103.036 -137.452)" fill="#fff" />
+                        </g>
+                      </svg>
+                      <svg id="instagram-2016" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="15.999" height="16" viewBox="0 0 15.999 16">
+                        <defs>
+                          <radialGradient id="radial-gradient" cx="0.133" cy="1.005" r="1.305" gradientTransform="translate(0)"
+                            gradientUnits="objectBoundingBox">
+                            <stop offset="0.09" stop-color="#fa8f21" />
+                            <stop offset="0.78" stop-color="#d82d7e" />
+                          </radialGradient>
+                          <radialGradient id="radial-gradient-2" cx="0.606" cy="1.05" r="1.029" gradientTransform="translate(0)"
+                            gradientUnits="objectBoundingBox">
+                            <stop offset="0.64" stop-color="#8c3aaa" stop-opacity="0" />
+                            <stop offset="1" stop-color="#8c3aaa" />
+                          </radialGradient>
+                        </defs>
+                        <path id="Path_692" data-name="Path 692"
+                          d="M5.334,8A2.667,2.667,0,1,1,8,10.667,2.667,2.667,0,0,1,5.334,8M3.892,8A4.108,4.108,0,1,0,8,3.892,4.108,4.108,0,0,0,3.892,8m7.418-4.271a.96.96,0,1,0,.96-.96h0a.96.96,0,0,0-.96.96M4.768,14.512a4.422,4.422,0,0,1-1.486-.275,2.486,2.486,0,0,1-.92-.6,2.468,2.468,0,0,1-.6-.92,4.417,4.417,0,0,1-.275-1.486c-.039-.843-.047-1.1-.047-3.233s.008-2.389.047-3.233a4.451,4.451,0,0,1,.275-1.486,2.486,2.486,0,0,1,.6-.92,2.466,2.466,0,0,1,.92-.6,4.417,4.417,0,0,1,1.486-.275c.843-.039,1.1-.047,3.232-.047s2.389.008,3.233.047a4.451,4.451,0,0,1,1.486.275,2.478,2.478,0,0,1,.92.6,2.478,2.478,0,0,1,.6.92,4.417,4.417,0,0,1,.275,1.486c.039.844.047,1.1.047,3.233s-.008,2.389-.047,3.233a4.438,4.438,0,0,1-.275,1.486,2.649,2.649,0,0,1-1.519,1.518,4.417,4.417,0,0,1-1.486.275c-.843.039-1.1.047-3.233.047s-2.389-.008-3.232-.047M4.7.048A5.866,5.866,0,0,0,2.76.42a3.924,3.924,0,0,0-1.417.923A3.909,3.909,0,0,0,.42,2.76,5.868,5.868,0,0,0,.048,4.7C.009,5.555,0,5.827,0,8s.009,2.445.048,3.3A5.867,5.867,0,0,0,.42,13.24a3.911,3.911,0,0,0,.923,1.417,3.933,3.933,0,0,0,1.417.923,5.871,5.871,0,0,0,1.942.372C5.555,15.99,5.827,16,8,16s2.445-.009,3.3-.048a5.867,5.867,0,0,0,1.942-.372,4.09,4.09,0,0,0,2.34-2.34,5.851,5.851,0,0,0,.372-1.942C15.99,10.445,16,10.173,16,8s-.009-2.445-.048-3.3A5.866,5.866,0,0,0,15.58,2.76a3.934,3.934,0,0,0-.923-1.417A3.915,3.915,0,0,0,13.241.42,5.858,5.858,0,0,0,11.3.048C10.446.01,10.173,0,8,0S5.555.009,4.7.048"
+                          fill="url(#radial-gradient)" />
+                        <path id="Path_693" data-name="Path 693"
+                          d="M5.334,8A2.667,2.667,0,1,1,8,10.667,2.667,2.667,0,0,1,5.334,8M3.892,8A4.108,4.108,0,1,0,8,3.892,4.108,4.108,0,0,0,3.892,8m7.418-4.271a.96.96,0,1,0,.96-.96h0a.96.96,0,0,0-.96.96M4.768,14.512a4.422,4.422,0,0,1-1.486-.275,2.486,2.486,0,0,1-.92-.6,2.468,2.468,0,0,1-.6-.92,4.417,4.417,0,0,1-.275-1.486c-.039-.843-.047-1.1-.047-3.233s.008-2.389.047-3.233a4.451,4.451,0,0,1,.275-1.486,2.486,2.486,0,0,1,.6-.92,2.466,2.466,0,0,1,.92-.6,4.417,4.417,0,0,1,1.486-.275c.843-.039,1.1-.047,3.232-.047s2.389.008,3.233.047a4.451,4.451,0,0,1,1.486.275,2.478,2.478,0,0,1,.92.6,2.478,2.478,0,0,1,.6.92,4.417,4.417,0,0,1,.275,1.486c.039.844.047,1.1.047,3.233s-.008,2.389-.047,3.233a4.438,4.438,0,0,1-.275,1.486,2.649,2.649,0,0,1-1.519,1.518,4.417,4.417,0,0,1-1.486.275c-.843.039-1.1.047-3.233.047s-2.389-.008-3.232-.047M4.7.048A5.866,5.866,0,0,0,2.76.42a3.924,3.924,0,0,0-1.417.923A3.909,3.909,0,0,0,.42,2.76,5.868,5.868,0,0,0,.048,4.7C.009,5.555,0,5.827,0,8s.009,2.445.048,3.3A5.867,5.867,0,0,0,.42,13.24a3.911,3.911,0,0,0,.923,1.417,3.933,3.933,0,0,0,1.417.923,5.871,5.871,0,0,0,1.942.372C5.555,15.99,5.827,16,8,16s2.445-.009,3.3-.048a5.867,5.867,0,0,0,1.942-.372,4.09,4.09,0,0,0,2.34-2.34,5.851,5.851,0,0,0,.372-1.942C15.99,10.445,16,10.173,16,8s-.009-2.445-.048-3.3A5.866,5.866,0,0,0,15.58,2.76a3.934,3.934,0,0,0-.923-1.417A3.915,3.915,0,0,0,13.241.42,5.858,5.858,0,0,0,11.3.048C10.446.01,10.173,0,8,0S5.555.009,4.7.048"
+                          fill="url(#radial-gradient-2)" />
+                      </svg>
+              
+                    </div>
+                  </div>
+                  <div class="flex flex-columns">
+                    <p>P.O BOX 273</p>
+                    <small>Along Nairobi</small>
+                    <small>Embu Highway</small>
+                    <small>Kirinyaga county</small>
+                    <small>Kimbimbi Town</small>
+                    <small>Kenya - 10303</small>
+                  </div>
+                  <div class="flex flex-columns">
+                    <p>For Developers</p>
+                    <small>Docs</small>
+                    <small>API</small>
+                    <small>Open Source</small>
+                    <small>Engineering Team</small>
+                  </div>
+                  <div class="flex flex-columns">
+                    <p>Company</p>
+                    <small>Careers</small>
+                    <small>Blog</small>
+                    <small>Press</small>
+                  </div>
+                  <div class="flex flex-columns">
+                    <p>Support</p>
+                    <small>Help Center</small>
+                    <small>Contact Us</small>
+                    <small>Security Bulletins</small>
+                    <small>Documentation</small>
+                    <small>Partner Portal</small>
+                  </div>
+                  <div class="flex flex-columns newsletter">
+                    <p>Newsletter</p>
+                    <div class="flex items-center newsletter__form">
+                      <input type="text" placeholder="Email">
+                      <button class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28.01" height="28.01" viewBox="0 0 28.01 28.01">
+                          <path id="Icon_ionic-ios-send" data-name="Icon ionic-ios-send"
+                            d="M23.686,4.547,4.748,12.8a.434.434,0,0,0,.015.789l5.123,2.894a.826.826,0,0,0,.944-.093l10.1-8.708c.067-.057.227-.165.289-.1s-.036.222-.093.289l-8.739,9.843a.823.823,0,0,0-.083.985l3.348,5.37a.436.436,0,0,0,.784-.01L24.268,5.12A.434.434,0,0,0,23.686,4.547Z"
+                            transform="translate(14.005 -6.368) rotate(45)" fill="#722ed1" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </footer>

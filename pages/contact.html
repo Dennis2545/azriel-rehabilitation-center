@@ -1,59 +1,111 @@
-<!DOCTYPE html>
-<html>
 <head>
-<title>Azriel</title>
-
-<!--META TAGS-->
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-<!--FONTAWESOME-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!--GOOGLE FONTS-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet"> 
-
-<!--EXTERNAL CSS AND JS-->
-<link rel="stylesheet" href="../css/contact.css">
-  <script src="../script/script.js"></script>
-
-</head>
-<body>
-
-<!--HEADER-->
-<!--HEADER-->
-<header>
-
-  <div class="logo parallelogram">
-    <span class="skew-fix"><img src="../pictures/g.png" alt="ALZERIA"></span>
-    </div>
+    <link rel="stylesheet" type="text/css" href="../style.css">  
+    <script type="text/javascript" src="../script.js"></script> 
+    <link rel="stylesheet" type="text/css" href="s.css"> 
+    
+  </head>
   
-  <div class="topnav" id="myTopnav">
-  <a href="../index.html" class="active">HOME</a>
-  <a href="about.html">ABOUT US</a>
-  <a href="programme.html">PROGRAMMES</a>
-  <div class="dropdown">
-    <button class="dropbtn">GALLERY
-    <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content animate">
-    <a href="gallery.html">Testmonial</a>
-    <a href="pictorial.html">pictorial</a>
+  <nav class="nav">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <style>
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .topnav {
+        overflow: hidden;
+        background-color: rgb(0, 0, 0);
+      }
+      
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: rgb(221, 221, 221);
+        color: black;
+      }
+      
+      .topnav a.split {
+    float: right;
+    background-color: #04AA6D;
+    color: white;
+  }
+      .topnav a.active {
+        background-color: #000000;
+        color: white;
+      }
+      
+      .topnav .icon {
+        display: none;
+      }
+      
+      @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+      </style>
+      </head>
+      <body>
+      
+        <div class="topnav" id="myTopnav">
+          <a href="#home" class="active"></a>
+          <a href="../index.html">HOMEPAGE</a>
+          <a href="about.html">ABOUT US</a>
+          <a href="programme.html">PROGRAMMES</a>
+            <a href="gallery.html">GALLERY
+            <i class="fa fa-caret-down"></i>
+            </a>
+          <a href="faq.html">FAQs</a>
+          <a href="contact.html" class="split">CONTACT US</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+     
+     
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+      
+        </li>
+      </ul>
+    </nav>
   
-    </div>
-    </div> 
-  <a href="faq.html">FAQs</a>
-  <a href="contact.html">CONTACT US</a>
-  
-  <a href="#" title="SignIn" style="float:right;"><i class="fa fa-user"></i></a>
-  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-  </div>
-  </header>
-<br>
-<br>
+
 <br>
 <br>
 <br>
@@ -65,88 +117,208 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<div class="card">
-  <i class="fa fa-medkit"></i>
-  <header class="section1">
-  <h1>DONATE TO AZRIEL</h1>
-  <header class="section1">
-  <P>This page provides basic information about being certified as a Medicare and/or Medicaid Inpatient Rehabilitation Facility (IRF) and includes links to applicable laws, regulations, and compliance information. </p>
-  </header>
-    <a href="form1.html" class="btn1">DONATE</a>
-  </header>
-  </div>
-  <div class="card">
-    <i class="fa fa-medkit"></i>
-    <header class="section1">
-    <h1>GIVE YOUR IDEAS ON HELPING THE NEEDY IN THE SOCIETY</h1>
-    <header class="section1">
-    <P>This page provides basic information about being certified as a Medicare and/or Medicaid Inpatient Rehabilitation Facility (IRF) and includes links to applicable laws, regulations, and compliance information. </p>
-    </header>
-      <a href="form1.html" class="btn1">GIVE IDEAS</a>
-    </header>
-    </div>
-<br>
-<br>
-<br>
 
-<!--SECTION1-->
-<section class="section1">
-<table>
-<tr>
-<td>
-<div class="form">
-<h4>REQUEST FOR YOUR</h4>
-<h1>Consultation</h1>
-<input type="text" name="fname" id="fname" placeholder="Name" maxlength="60" required />
-<input type="email" name="email" id="email" placeholder="Email" maxlength="100" required />
-<input type="date" name="date" id="date" placeholder="" required />
-<select name="service">
-<option value="emergencyservice">Emergency Service</option>
-<option value="certifiedservice">Therapy Service</option>
-</select>
-<button type="submit" class="btn2">BOOK APPOINTMENT</button>
-</div>
-</td>
-</tr>
-</table>
+<section class="excellence">
+  <p class="tag rounded">
+  <div class="excellence__items">
+    <div class="excellence__item">
+      
+      <h3>NEED FOR DONATION</h3>
+      <P>This page provides basic information about being certified as a Medicare and/or Medicaid Inpatient Rehabilitation Facility (IRF) and includes links to applicable law</p>
+       
+      </div>
+    <div class="excellence__item">
+      <div class="background-danger excellence__icon flex items-center justify-center">
+        <svg id="newsletter-dev" xmlns="http://www.w3.org/2000/svg" width="16.092" height="16.092"
+          viewBox="0 0 16.092 16.092">
+          <g id="Group_19" data-name="Group 19">
+            <path id="Path_628" data-name="Path 628"
+              d="M4.111,7.973V1.006h9.052V7.973l2.907-1.615-1.9-1.115V.5a.5.5,0,0,0-.5-.5H3.608a.5.5,0,0,0-.5.5V5.241L1.188,6.35Z"
+              transform="translate(-0.591)" fill="#f5222d" />
+            <path id="Path_629" data-name="Path 629"
+              d="M8.29,18.589a.5.5,0,0,1-.488,0L0,14.255v8.42a.5.5,0,0,0,.5.5H15.589a.5.5,0,0,0,.5-.5v-8.42Z"
+              transform="translate(0 -7.087)" fill="#f5222d" />
+            <path id="Path_630" data-name="Path 630"
+              d="M11.011,10.025,9.147,8.161a.5.5,0,0,1,0-.711l1.864-1.864.711.711L10.214,7.806l1.509,1.509Z"
+              transform="translate(-4.474 -2.777)" fill="#f5222d" />
+            <path id="Path_631" data-name="Path 631"
+              d="M18.3,10.025l-.711-.711,1.509-1.509L17.586,6.3l.711-.711L20.161,7.45a.5.5,0,0,1,0,.711Z"
+              transform="translate(-8.743 -2.777)" fill="#f5222d" />
+          </g>
+        </svg>
+      </div>
+      <h3>DONATION</h3>
+      <p>Mental health and substance use treatment beds in our site for Expansion in residential care and treatment, For that case more funds are required to help the society be the reason why someone is saved today</p>
+      <br>
+        <br>
+        <br>
+
+      <a href="form.html" class="button button-primary rounded">Click to Fill Donation form</a>
+    </div>
+    <div class="excellence__item">
+      <div class="background-info excellence__icon flex items-center justify-center">
+        <svg id="chart-bar-33" xmlns="http://www.w3.org/2000/svg" width="17.32" height="17.32"
+          viewBox="0 0 17.32 17.32">
+          <g id="Group_18" data-name="Group 18">
+            <path id="Path_624" data-name="Path 624"
+              d="M15.789,17H12.541a.541.541,0,0,0-.541.541v7.036a.541.541,0,0,0,.541.541h3.248a.541.541,0,0,0,.541-.541V17.541A.541.541,0,0,0,15.789,17Z"
+              transform="translate(-5.505 -7.799)" fill="#1890ff" />
+            <path id="Path_625" data-name="Path 625"
+              d="M3.789,23H.541A.541.541,0,0,0,0,23.541V27.33a.541.541,0,0,0,.541.541H3.789a.541.541,0,0,0,.541-.541V23.541A.541.541,0,0,0,3.789,23Z"
+              transform="translate(0 -10.551)" fill="#1890ff" />
+            <path id="Path_626" data-name="Path 626"
+              d="M27.789,11H24.541a.541.541,0,0,0-.541.541V21.825a.541.541,0,0,0,.541.541h3.248a.541.541,0,0,0,.541-.541V11.541A.541.541,0,0,0,27.789,11Z"
+              transform="translate(-11.01 -5.046)" fill="#1890ff" />
+            <path id="Path_627" data-name="Path 627"
+              d="M11.088,6.5a.54.54,0,0,0,.383-.159L15.96,1.848V4.33h1.083V.541A.541.541,0,0,0,16.5,0H12.712V1.083h2.482L11.088,5.189,8.765,2.865a.541.541,0,0,0-.765,0L5.293,5.571l.765.765L8.382,4.013l2.324,2.324A.54.54,0,0,0,11.088,6.5Z"
+              transform="translate(-2.428)" fill="#1890ff" />
+          </g>
+        </svg>
+      </div>
+      <h3>WELCOME TO VOLUNTEER</h3>
+      <p>TO VOLUNTEER IS A BLESSING CALL FROM GOD TO HIS PEOPLE, HELP ALZERIA TO REACH MORE CORNERS WITH YOUR WISH TO HELP OR CHANGE ALZERIA, GOD BLESS YOU</p>
+      <br>
+        <br>
+      <a href="form.htnl" class="button button-primary rounded">Click To fill Volunteer form</a>
+    </div>
+
+
+  </div>
 </section>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!--FOOTER-->
-<img src="https://i.ibb.co/ZLHbWJz/footer.png" class="footer_image">
-<footer>
-<div class="column">
-<a class="footer_title">AZRIEL COUNSELING</a>
-<a>This page includes references to pertinent laws, rules, and compliance details as well as basic information regarding becoming accredited as a Medicare and/or Medicaid Inpatient Rehabilitation Facility (IRF). IRFs are acute care hospitals' inpatient rehabilitation facilities as well as standalone rehabilitation hospitals.</a>
-<a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
-<a href="#" title="Instagram"><i class="fa fa-instagram"></i></a>
-<a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
-</div>
-
-<div class="column">
-<a class="footer_title">GET IN TOUCH</a>
-<a title="Address"><i class="fa fa-map-marker"></i> p.o Box 273, Along Nairobi - Embu Highway, Kirinyaga County/Kimbimbi Town, Kenya - 10303</a>
-<a href="emailto:" title="Email"><i class="fa fa-envelope"></i> azrielcounseling@gmail.com</a>
-<a href="tel:" title="Contact"><i class="fa fa-phone"></i> +254722332547</a>
-</div>
 
 
-<div class="sub-footer">
-© CopyRights 2022 Azriel|| All rights reserved
-</div>
+<br>
+<br>
+<section class="sign-up">
+  <div class="sign-up__text">
+    <h2>See why the world trust Alzeria to become truly image-changing organization.</h2>
+    <p class="sign-up__desc">Trusted by the community</p>
+    <div class="sign-up__companies">
+      
+
+
+
+
+
+     
+    </div>
+  </div>
+  <form class="sign-up__form">
+    <h3>Email us</h3>
+    <input class="input" type="email" placeholder="Your primary email">
+    <input class="input" type="subject" placeholder="subject">
+    <input class="input" type="Message" placeholder="message">
+    <button class="button button-primary mb-6">Submit</button>
+    <p class="mb-6">OR</p>
+   
+    <hr>
+    <p>Or you can call us on <a href="#">0796418224</a></p>
+  </form>
+</section>
+
+
+<footer class="footer">
+  <div class="flex flex-columns">
+    
+        <path id="Path_612" data-name="Path 612" d="M1780.065,378.462v13.716l-12,6.857-12-6.858h0Z"
+          transform="translate(0 0)" fill="#00c8f0" />
+        <path id="Path_613" data-name="Path 613" d="M1768.067,435.321l12,6.857v13.714h0l-12-6.857-12-6.857V428.463Z"
+          transform="translate(0 -36.287)" fill="#1563ff" />
+        <path id="Path_614" data-name="Path 614" d="M1854.67,485.32v13.713l-12-6.856h0V478.463Z"
+          transform="translate(-62.604 -72.572)" fill="#1563ff" />
+        <path id="Path_615" data-name="Path 615" d="M1842.669,378.462v0h0v13.714h0l12,6.856v0h0l12,6.856V392.177Z"
+          transform="translate(-62.604)" fill="#1563ff" />
+        <path id="Path_616" data-name="Path 616" d="M1866.668,428.463v13.716l-12,6.857-12-6.858,12-6.858Z"
+          transform="translate(-62.604 -36.287)" fill="#00c8f0" />
+        <path id="Path_617" data-name="Path 617" d="M1854.67,485.32l-12,6.857h0V478.463Z"
+          transform="translate(-62.604 -72.572)" fill="#0b96f8" />
+      </g>
+    </svg>
+    <small class="mb-6">Our mission is to provide highest quality medical care and rehabilitation services and improve the quality of each patient physically, emotionally and achieve maximum functional recovery</small>
+    <div class="social-medias">
+      <svg id="facebook-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <path id="Path_687" data-name="Path 687"
+          d="M15.117,16A.883.883,0,0,0,16,15.117V.883A.883.883,0,0,0,15.117,0H.883A.883.883,0,0,0,0,.883V15.117A.883.883,0,0,0,.883,16H15.117Z"
+          fill="#485a96" />
+        <path id="Path_688" data-name="Path 688"
+          d="M112.353,53.893V47.7h2.08l.311-2.415h-2.391V43.741c0-.7.194-1.176,1.2-1.176h1.279v-2.16a17.111,17.111,0,0,0-1.863-.1,2.91,2.91,0,0,0-3.106,3.192v1.781h-2.085V47.7h2.085v6.2h2.494Z"
+          transform="translate(-101.313 -37.893)" fill="#fff" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+        <g id="twitter-3" transform="translate(-126.176 -2.014)">
+          <circle id="Ellipse_19" data-name="Ellipse 19" cx="8" cy="8" r="8" transform="translate(126.176 2.014)"
+            fill="#2daae1" />
+          <path id="Path_691" data-name="Path 691"
+            d="M242.31,144.3a4.175,4.175,0,0,1-1.2.329,2.1,2.1,0,0,0,.92-1.157,4.179,4.179,0,0,1-1.328.508,2.092,2.092,0,0,0-3.618,1.431,2.116,2.116,0,0,0,.054.477,5.939,5.939,0,0,1-4.311-2.185,2.094,2.094,0,0,0,.647,2.792,2.082,2.082,0,0,1-.947-.261v.026a2.092,2.092,0,0,0,1.678,2.051,2.081,2.081,0,0,1-.551.073,2.123,2.123,0,0,1-.394-.037,2.094,2.094,0,0,0,1.954,1.452,4.211,4.211,0,0,1-3.1.866,5.948,5.948,0,0,0,9.157-5.011q0-.136-.006-.271A4.262,4.262,0,0,0,242.31,144.3Z"
+            transform="translate(-103.036 -137.452)" fill="#fff" />
+        </g>
+      </svg>
+      <svg id="instagram-2016" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="15.999" height="16" viewBox="0 0 15.999 16">
+        <defs>
+          <radialGradient id="radial-gradient" cx="0.133" cy="1.005" r="1.305" gradientTransform="translate(0)"
+            gradientUnits="objectBoundingBox">
+            <stop offset="0.09" stop-color="#fa8f21" />
+            <stop offset="0.78" stop-color="#d82d7e" />
+          </radialGradient>
+          <radialGradient id="radial-gradient-2" cx="0.606" cy="1.05" r="1.029" gradientTransform="translate(0)"
+            gradientUnits="objectBoundingBox">
+            <stop offset="0.64" stop-color="#8c3aaa" stop-opacity="0" />
+            <stop offset="1" stop-color="#8c3aaa" />
+          </radialGradient>
+        </defs>
+        <path id="Path_692" data-name="Path 692"
+          d="M5.334,8A2.667,2.667,0,1,1,8,10.667,2.667,2.667,0,0,1,5.334,8M3.892,8A4.108,4.108,0,1,0,8,3.892,4.108,4.108,0,0,0,3.892,8m7.418-4.271a.96.96,0,1,0,.96-.96h0a.96.96,0,0,0-.96.96M4.768,14.512a4.422,4.422,0,0,1-1.486-.275,2.486,2.486,0,0,1-.92-.6,2.468,2.468,0,0,1-.6-.92,4.417,4.417,0,0,1-.275-1.486c-.039-.843-.047-1.1-.047-3.233s.008-2.389.047-3.233a4.451,4.451,0,0,1,.275-1.486,2.486,2.486,0,0,1,.6-.92,2.466,2.466,0,0,1,.92-.6,4.417,4.417,0,0,1,1.486-.275c.843-.039,1.1-.047,3.232-.047s2.389.008,3.233.047a4.451,4.451,0,0,1,1.486.275,2.478,2.478,0,0,1,.92.6,2.478,2.478,0,0,1,.6.92,4.417,4.417,0,0,1,.275,1.486c.039.844.047,1.1.047,3.233s-.008,2.389-.047,3.233a4.438,4.438,0,0,1-.275,1.486,2.649,2.649,0,0,1-1.519,1.518,4.417,4.417,0,0,1-1.486.275c-.843.039-1.1.047-3.233.047s-2.389-.008-3.232-.047M4.7.048A5.866,5.866,0,0,0,2.76.42a3.924,3.924,0,0,0-1.417.923A3.909,3.909,0,0,0,.42,2.76,5.868,5.868,0,0,0,.048,4.7C.009,5.555,0,5.827,0,8s.009,2.445.048,3.3A5.867,5.867,0,0,0,.42,13.24a3.911,3.911,0,0,0,.923,1.417,3.933,3.933,0,0,0,1.417.923,5.871,5.871,0,0,0,1.942.372C5.555,15.99,5.827,16,8,16s2.445-.009,3.3-.048a5.867,5.867,0,0,0,1.942-.372,4.09,4.09,0,0,0,2.34-2.34,5.851,5.851,0,0,0,.372-1.942C15.99,10.445,16,10.173,16,8s-.009-2.445-.048-3.3A5.866,5.866,0,0,0,15.58,2.76a3.934,3.934,0,0,0-.923-1.417A3.915,3.915,0,0,0,13.241.42,5.858,5.858,0,0,0,11.3.048C10.446.01,10.173,0,8,0S5.555.009,4.7.048"
+          fill="url(#radial-gradient)" />
+        <path id="Path_693" data-name="Path 693"
+          d="M5.334,8A2.667,2.667,0,1,1,8,10.667,2.667,2.667,0,0,1,5.334,8M3.892,8A4.108,4.108,0,1,0,8,3.892,4.108,4.108,0,0,0,3.892,8m7.418-4.271a.96.96,0,1,0,.96-.96h0a.96.96,0,0,0-.96.96M4.768,14.512a4.422,4.422,0,0,1-1.486-.275,2.486,2.486,0,0,1-.92-.6,2.468,2.468,0,0,1-.6-.92,4.417,4.417,0,0,1-.275-1.486c-.039-.843-.047-1.1-.047-3.233s.008-2.389.047-3.233a4.451,4.451,0,0,1,.275-1.486,2.486,2.486,0,0,1,.6-.92,2.466,2.466,0,0,1,.92-.6,4.417,4.417,0,0,1,1.486-.275c.843-.039,1.1-.047,3.232-.047s2.389.008,3.233.047a4.451,4.451,0,0,1,1.486.275,2.478,2.478,0,0,1,.92.6,2.478,2.478,0,0,1,.6.92,4.417,4.417,0,0,1,.275,1.486c.039.844.047,1.1.047,3.233s-.008,2.389-.047,3.233a4.438,4.438,0,0,1-.275,1.486,2.649,2.649,0,0,1-1.519,1.518,4.417,4.417,0,0,1-1.486.275c-.843.039-1.1.047-3.233.047s-2.389-.008-3.232-.047M4.7.048A5.866,5.866,0,0,0,2.76.42a3.924,3.924,0,0,0-1.417.923A3.909,3.909,0,0,0,.42,2.76,5.868,5.868,0,0,0,.048,4.7C.009,5.555,0,5.827,0,8s.009,2.445.048,3.3A5.867,5.867,0,0,0,.42,13.24a3.911,3.911,0,0,0,.923,1.417,3.933,3.933,0,0,0,1.417.923,5.871,5.871,0,0,0,1.942.372C5.555,15.99,5.827,16,8,16s2.445-.009,3.3-.048a5.867,5.867,0,0,0,1.942-.372,4.09,4.09,0,0,0,2.34-2.34,5.851,5.851,0,0,0,.372-1.942C15.99,10.445,16,10.173,16,8s-.009-2.445-.048-3.3A5.866,5.866,0,0,0,15.58,2.76a3.934,3.934,0,0,0-.923-1.417A3.915,3.915,0,0,0,13.241.42,5.858,5.858,0,0,0,11.3.048C10.446.01,10.173,0,8,0S5.555.009,4.7.048"
+          fill="url(#radial-gradient-2)" />
+      </svg>
+
+    </div>
+  </div>
+  <div class="flex flex-columns">
+    <p>P.O BOX 273</p>
+    <small>Along Nairobi</small>
+    <small>Embu Highway</small>
+    <small>Kirinyaga county</small>
+    <small>Kimbimbi Town</small>
+    <small>Kenya - 10303</small>
+  </div>
+  <div class="flex flex-columns">
+    <p>For Developers</p>
+    <small>Docs</small>
+    <small>API</small>
+    <small>Open Source</small>
+    <small>Engineering Team</small>
+  </div>
+  <div class="flex flex-columns">
+    <p>Company</p>
+    <small>Careers</small>
+    <small>Blog</small>
+    <small>Press</small>
+  </div>
+  <div class="flex flex-columns">
+    <p>Support</p>
+    <small>Help Center</small>
+    <small>Contact Us</small>
+    <small>Security Bulletins</small>
+    <small>Documentation</small>
+    <small>Partner Portal</small>
+  </div>
+  <div class="flex flex-columns newsletter">
+    <p>Newsletter</p>
+    <div class="flex items-center newsletter__form">
+      <input type="text" placeholder="Email">
+      <button class="flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28.01" height="28.01" viewBox="0 0 28.01 28.01">
+          <path id="Icon_ionic-ios-send" data-name="Icon ionic-ios-send"
+            d="M23.686,4.547,4.748,12.8a.434.434,0,0,0,.015.789l5.123,2.894a.826.826,0,0,0,.944-.093l10.1-8.708c.067-.057.227-.165.289-.1s-.036.222-.093.289l-8.739,9.843a.823.823,0,0,0-.083.985l3.348,5.37a.436.436,0,0,0,.784-.01L24.268,5.12A.434.434,0,0,0,23.686,4.547Z"
+            transform="translate(14.005 -6.368) rotate(45)" fill="#722ed1" />
+        </svg>
+      </button>
+    </div>
+  </div>
 </footer>
-
-<!--JAVASCRIPT-->
-<script src="js/custom.js"></script>
-</body>
-</html>
